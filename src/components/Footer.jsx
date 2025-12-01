@@ -12,7 +12,7 @@ const Footer = () => {
                             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                                 <img src="/logo.jpg" alt="VPG Logo" className="w-8 h-8 object-contain" />
                             </div>
-                            <span className="text-2xl font-bold">VPG<span className="text-primary">Energy</span></span>
+                            <span className="text-2xl font-bold">VPG<span className="text-primary">Proyectos</span></span>
                         </Link>
                         <p className="text-gray-400 max-w-md mb-8">
                             Transformando el futuro energético con soluciones sostenibles y eficientes.
@@ -44,16 +44,20 @@ const Footer = () => {
                         <h4 className="text-lg font-bold mb-6">Contacto</h4>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400">
-                                <MapPin className="w-5 h-5 text-primary shrink-0" />
-                                <span>Calle Principal 123,<br />28001 Madrid, España</span>
+                                <div className="font-semibold text-white">David García Rodríguez</div>
+                                <span className="text-sm bg-primary/20 text-primary px-2 py-0.5 rounded">CEO</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                                <span>+34 912 345 678</span>
+                                <span>+34 614 809 365</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                                <span>info@vpgenergy.com</span>
+                                <span>dgarcia@vpgproyectos.es</span>
+                            </li>
+                            <li className="flex items-center gap-3 text-gray-400">
+                                <MapPin className="w-5 h-5 text-primary shrink-0" />
+                                <span>www.vpgproyectos.es</span>
                             </li>
                         </ul>
                     </div>

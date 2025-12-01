@@ -8,11 +8,11 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: '#EAA315', // Logo Gold
+                    DEFAULT: '#EAA315', // VPG Gold
                     foreground: '#0B253A',
                 },
                 secondary: {
-                    DEFAULT: '#0B253A', // Logo Dark Blue
+                    DEFAULT: '#0B253A', // VPG Dark Blue
                     foreground: '#FFFFFF',
                 },
                 accent: {

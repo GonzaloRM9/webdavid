@@ -1,24 +1,24 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
-import { Sun, Zap, Wrench } from 'lucide-react';
+import { Sun, Zap, HardHat } from 'lucide-react';
 
 const Home = () => {
     const services = [
         {
-            icon: Sun,
-            title: "Energía Solar",
-            description: "Instalación de paneles fotovoltaicos de última generación para máximo rendimiento y ahorro."
-        },
-        {
             icon: Zap,
             title: "Instalaciones Eléctricas",
-            description: "Proyectos eléctricos integrales, desde la planificación hasta la ejecución y certificación."
+            description: "Proyectos eléctricos integrales de baja y media tensión. Certificaciones y boletines."
         },
         {
-            icon: Wrench,
-            title: "Mantenimiento",
-            description: "Servicio técnico especializado para garantizar la operatividad y seguridad de tus instalaciones."
+            icon: Sun,
+            title: "Placas Solares",
+            description: "Autoconsumo fotovoltaico industrial y residencial. Máxima eficiencia y ahorro garantizado."
+        },
+        {
+            icon: HardHat,
+            title: "Obras Civiles",
+            description: "Ejecución de obras civiles, zanjas, canalizaciones y cimentaciones para infraestructuras."
         }
     ];
 

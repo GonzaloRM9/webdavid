@@ -18,14 +18,14 @@ const Hero = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-6">
                         <Sun className="w-4 h-4" />
-                        <span>Líderes en Energía Renovable</span>
+                        <span>Excelencia en Construcción y Energía</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-bold text-secondary leading-tight mb-6">
-                        Energía que <span className="text-primary">Impulsa</span> el Futuro
+                        Grandes Obras e <span className="text-primary">Instalaciones</span>
                     </h1>
                     <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
-                        Instalaciones eléctricas de vanguardia y soluciones solares para hogares y empresas.
-                        Eficiencia, sostenibilidad y ahorro garantizado.
+                        Especialistas en instalaciones eléctricas, placas solares y obras civiles.
+                        Soluciones integrales con la máxima calidad y profesionalidad.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link

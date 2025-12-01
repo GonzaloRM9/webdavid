@@ -37,7 +37,7 @@ const Navbar = () => {
                         <img src="/logo.jpg" alt="VPG Logo" className="object-cover w-full h-full" />
                     </div>
                     <span className={cn("text-2xl font-bold tracking-tight transition-colors", isScrolled ? "text-secondary" : "text-secondary")}>
-                        VPG<span className="text-primary">Energy</span>
+                        VPG<span className="text-primary">Proyectos</span>
                     </span>
                 </Link>
 
