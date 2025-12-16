@@ -35,10 +35,10 @@ const Footer = () => {
                                 <Link to="/" className="text-gray-400 hover:text-primary transition-colors">Inicio</Link>
                             </li>
                             <li>
-                                <Link to="/presupuesto" className="text-gray-400 hover:text-primary transition-colors">Presupuesto</Link>
+                                <Link to="/contacto" className="text-gray-400 hover:text-primary transition-colors">Contacto</Link>
                             </li>
                             <li>
-                                <Link to="/contacto" className="text-gray-400 hover:text-primary transition-colors">Contacto</Link>
+                                <Link to="/presupuesto" className="text-gray-400 hover:text-primary transition-colors">Presupuesto</Link>
                             </li>
                         </ul>
                     </div>
