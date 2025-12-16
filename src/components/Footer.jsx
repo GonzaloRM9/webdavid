@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                     <div className="max-w-md">
                         <Link to="/" className="flex items-center gap-2 mb-6">
                             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                                <img src="src/assets/logo.png" alt="VPG Logo" className="w-8 h-8 object-contain" />
+                                <img src={logo} alt="VPG Logo" className="w-8 h-8 object-contain" />
                             </div>
                             <span className="text-2xl font-bold">VPG<span className="text-primary">Proyectos</span></span>
                         </Link>

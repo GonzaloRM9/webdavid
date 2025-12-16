@@ -4,6 +4,8 @@ import { Menu, X, Sun, Zap, Phone } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import logo from '../assets/logo.png';
+
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +35,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 group">
                     <div className="relative w-10 h-10 overflow-hidden rounded-lg">
-                        <img src="src\assets\logo.png" alt="VPG Logo" className="object-cover w-full h-full" />
+                        <img src={logo} alt="VPG Logo" className="object-cover w-full h-full" />
                     </div>
                     <span className={cn("text-2xl font-bold tracking-tight transition-colors", isScrolled ? "text-secondary" : "text-secondary")}>
                         VPG<span className="text-primary">Proyectos</span>
