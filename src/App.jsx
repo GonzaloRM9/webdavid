@@ -9,7 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router basename="/webdavid">
+    <Router>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-background">
         <Navbar />
