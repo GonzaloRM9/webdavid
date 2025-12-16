@@ -18,8 +18,7 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Inicio', path: '/' },
-        { name: 'Servicios', path: '/#servicios' },
-        { name: 'Impacto', path: '/impacto' },
+        { name: 'Contacto', path: '/contacto' },
         { name: 'Presupuesto', path: '/presupuesto', primary: true },
     ];
 
@@ -34,7 +33,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 group">
                     <div className="relative w-10 h-10 overflow-hidden rounded-lg">
-                        <img src="/logo.jpg" alt="VPG Logo" className="object-cover w-full h-full" />
+                        <img src="src\assets\logo.png" alt="VPG Logo" className="object-cover w-full h-full" />
                     </div>
                     <span className={cn("text-2xl font-bold tracking-tight transition-colors", isScrolled ? "text-secondary" : "text-secondary")}>
                         VPG<span className="text-primary">Proyectos</span>

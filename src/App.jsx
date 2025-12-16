@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Budget from './pages/Budget';
-import Impact from './pages/Impact';
+import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/presupuesto" element={<Budget />} />
-            <Route path="/impacto" element={<Impact />} />
+            <Route path="/contacto" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

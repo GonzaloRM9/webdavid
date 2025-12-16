@@ -46,6 +46,7 @@ const ContactForm = () => {
                         <option value="solar">Instalación Solar</option>
                         <option value="electric">Instalación Eléctrica</option>
                         <option value="maintenance">Mantenimiento</option>
+                        <option value="civil">Obra Civil</option>
                         <option value="other">Otro</option>
                     </select>
                 </div>
