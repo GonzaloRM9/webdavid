@@ -7,37 +7,16 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: {
-                    DEFAULT: '#EAA315', // VPG Gold
-                    foreground: '#0B253A',
-                },
-                secondary: {
-                    DEFAULT: '#0B253A', // VPG Dark Blue
-                    foreground: '#FFFFFF',
-                },
-                accent: {
-                    DEFAULT: '#10B981', // Sustainability Green
-                    foreground: '#FFFFFF',
-                },
-                background: '#F8FAFC', // Slate 50
-                surface: '#FFFFFF',
+                vpg: {
+                    navy: '#003057',
+                    yellow: '#FFC107',
+                    'navy-light': '#004A7C',
+                    'yellow-dark': '#FFA000',
+                }
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-            },
-            animation: {
-                'fade-in': 'fadeIn 0.5s ease-out',
-                'slide-up': 'slideUp 0.5s ease-out',
-            },
-            keyframes: {
-                fadeIn: {
-                    '0%': { opacity: '0' },
-                    '100%': { opacity: '1' },
-                },
-                slideUp: {
-                    '0%': { transform: 'translateY(20px)', opacity: '0' },
-                    '100%': { transform: 'translateY(0)', opacity: '1' },
-                },
+                sans: ['Montserrat', 'sans-serif'],
+                body: ['Open Sans', 'sans-serif'],
             },
         },
     },
