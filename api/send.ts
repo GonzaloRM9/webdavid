@@ -34,13 +34,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         await resend.emails.send({
             from: 'VPG Proyectos <info@mail.vpgproyectos.es>',
             to: 'dgarcia@vpgproyectos.es',
+            replyTo: email,
             subject: 'Nuevo contacto desde la web',
             html: `
     <h3>Nuevo lead recibido</h3>
     <p><b>Nombre:</b> ${name}</p>
     <p><b>Email:</b> ${email}</p>
+    <p><b>Teléfono:</b> ${phone}</p>
     <p><b>Empresa:</b> ${company}</p>
     <p><b>Servicio:</b> ${service}</p>
+    <p><b>Ubicación:</b> ${location}</p>
+    <p><b>Presupuesto:</b> ${budget}</p>
+    <p><b>Plazo:</b> ${timeline}</p>
+    <p><b>Preferencia de contacto:</b> ${contactMethod}</p>
     <p><b>Mensaje:</b> ${description}</p>
   `
         })
