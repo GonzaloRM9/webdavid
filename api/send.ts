@@ -20,10 +20,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         const {
             name,
+            clientType,
             company,
             email,
             phone,
             service,
+            serviceSubcategory,
             location,
             budget,
             timeline,
@@ -41,8 +43,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     <p><b>Nombre:</b> ${name}</p>
     <p><b>Email:</b> ${email}</p>
     <p><b>Teléfono:</b> ${phone}</p>
-    <p><b>Empresa:</b> ${company}</p>
+    <p><b>Tipo de Cliente:</b> ${clientType === 'empresa' ? 'Empresa' : 'Particular'}</p>
+    ${clientType === 'empresa' ? `<p><b>Empresa:</b> ${company}</p>` : ''}
     <p><b>Servicio:</b> ${service}</p>
+    ${serviceSubcategory ? `<p><b>Especialidad:</b> ${serviceSubcategory}</p>` : ''}
     <p><b>Ubicación:</b> ${location}</p>
     <p><b>Presupuesto:</b> ${budget}</p>
     <p><b>Plazo:</b> ${timeline}</p>

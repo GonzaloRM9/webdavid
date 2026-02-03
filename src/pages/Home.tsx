@@ -16,7 +16,7 @@ import electricalImage from '../assets/images/electrical.png';
 import solarImage from '../assets/images/solar.png';
 import civilImage from '../assets/images/civil.png';
 import plumbingImage from '../assets/images/plumbing.png';
-import constructionImage from '../assets/images/construction.jpg';
+import placassolarImage from '../assets/images/placassolar.png';
 
 const Home = () => {
     const fadeInUp = {
@@ -116,8 +116,8 @@ const Home = () => {
                             className="relative"
                         >
                             <img
-                                src={constructionImage}
-                                alt="Construcción"
+                                src={placassolarImage}
+                                alt="Placassolar"
                                 className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
                             />
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-vpg-yellow opacity-50 rounded-lg -z-10"></div>

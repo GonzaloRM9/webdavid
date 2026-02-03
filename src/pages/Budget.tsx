@@ -6,6 +6,46 @@ const Budget = () => {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [clientType, setClientType] = useState<'empresa' | 'particular'>('empresa');
+    const [companyName, setCompanyName] = useState('');
+    const [serviceCategory, setServiceCategory] = useState('');
+    const [serviceSubcategory, setServiceSubcategory] = useState('');
+
+    // Service subcategories mapping
+    const serviceSubcategories: Record<string, string[]> = {
+        electrical: [
+            'Residencial',
+            'Industrial',
+            'Líneas subterráneas baja tensión',
+            'Puntos de recarga vehículo eléctrico',
+            'Alumbrados públicos',
+            'Cuadros y automatización',
+            'Sistemas de protección y medida',
+            'Legalizaciones y puesta en servicio'
+        ],
+        solar: [
+            'Plantas fotovoltaicas',
+            'Autoconsumo industrial',
+            'Autoconsumo residencial',
+            'Cableado y conexiones DC',
+            'Cableado y conexiones AC baja tensión',
+            'Cableado y conexiones AC media tensión',
+            'BESS integrado en planta FV'
+        ],
+        civil: [
+            'Zanjas y canalizaciones',
+            'Movimiento de tierras',
+            'Plataformas y cimentaciones',
+            'Drenajes y escolleras',
+            'Caminos y accesos'
+        ],
+        multiple: [
+            'Fontanería general',
+            'Saneamiento',
+            'Climatización',
+            'Estudios y asesoramiento técnico'
+        ]
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -15,10 +55,12 @@ const Budget = () => {
         const formData = new FormData(e.currentTarget);
         const data = {
             name: formData.get('name'),
-            company: formData.get('company'),
+            clientType: clientType,
+            company: clientType === 'empresa' ? companyName : 'Particular',
             email: formData.get('email'),
             phone: formData.get('phone'),
-            service: formData.get('service'),
+            service: serviceCategory,
+            serviceSubcategory: serviceSubcategory,
             location: formData.get('location'),
             budget: formData.get('budget'),
             timeline: formData.get('timeline'),
@@ -130,17 +172,45 @@ const Budget = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
-                                            Empresa *
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                            Tipo de Cliente *
                                         </label>
-                                        <input
-                                            type="text"
-                                            id="company"
-                                            name="company"
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vpg-yellow focus:border-transparent transition-all"
-                                            placeholder="Nombre de tu empresa"
-                                        />
+                                        <div className="flex gap-4 mb-4">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="radio"
+                                                    name="client-type"
+                                                    value="empresa"
+                                                    checked={clientType === 'empresa'}
+                                                    onChange={(e) => setClientType(e.target.value as 'empresa' | 'particular')}
+                                                    className="mr-2 text-vpg-yellow focus:ring-vpg-yellow"
+                                                />
+                                                <span className="text-gray-700">Empresa</span>
+                                            </label>
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="radio"
+                                                    name="client-type"
+                                                    value="particular"
+                                                    checked={clientType === 'particular'}
+                                                    onChange={(e) => setClientType(e.target.value as 'empresa' | 'particular')}
+                                                    className="mr-2 text-vpg-yellow focus:ring-vpg-yellow"
+                                                />
+                                                <span className="text-gray-700">Particular</span>
+                                            </label>
+                                        </div>
+                                        {clientType === 'empresa' && (
+                                            <input
+                                                type="text"
+                                                id="company"
+                                                name="company"
+                                                value={companyName}
+                                                onChange={(e) => setCompanyName(e.target.value)}
+                                                required
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vpg-yellow focus:border-transparent transition-all"
+                                                placeholder="Nombre de tu empresa"
+                                            />
+                                        )}
                                     </div>
                                 </div>
 
@@ -185,6 +255,11 @@ const Budget = () => {
                                             <select
                                                 id="service"
                                                 name="service"
+                                                value={serviceCategory}
+                                                onChange={(e) => {
+                                                    setServiceCategory(e.target.value);
+                                                    setServiceSubcategory(''); // Reset subcategory when main service changes
+                                                }}
                                                 required
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vpg-yellow focus:border-transparent transition-all"
                                             >
@@ -195,6 +270,31 @@ const Budget = () => {
                                                 <option value="multiple">Varios Servicios</option>
                                             </select>
                                         </div>
+
+                                        {/* Cascading subcategory dropdown */}
+                                        {serviceCategory && serviceSubcategories[serviceCategory] && (
+                                            <div>
+                                                <label htmlFor="service-subcategory" className="block text-sm font-semibold text-gray-700 mb-2">
+                                                    Especifica el Servicio *
+                                                </label>
+                                                <select
+                                                    id="service-subcategory"
+                                                    name="service-subcategory"
+                                                    value={serviceSubcategory}
+                                                    onChange={(e) => setServiceSubcategory(e.target.value)}
+                                                    required
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vpg-yellow focus:border-transparent transition-all"
+                                                >
+                                                    <option value="">Selecciona una especialidad</option>
+                                                    {serviceSubcategories[serviceCategory].map((subcategory) => (
+                                                        <option key={subcategory} value={subcategory}>
+                                                            {subcategory}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                            </div>
+                                        )}
+
                                         <div>
                                             <label htmlFor="location" className="block text-sm font-semibold text-gray-700 mb-2">
                                                 Ubicación del Proyecto *
