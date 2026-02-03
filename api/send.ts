@@ -32,8 +32,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         } = req.body
 
         await resend.emails.send({
-            from: 'test@resend.dev',
-            to: 'grx.gonzalo@gmail.com',
+            from: 'VPG Proyectos <info@mail.vpgproyectos.es>',
+            to: 'dgarcia@vpgproyectos.es',
             subject: 'Nuevo contacto desde la web',
             html: `
     <h3>Nuevo lead recibido</h3>
