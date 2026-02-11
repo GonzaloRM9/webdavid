@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+
 
 interface SEOProps {
     title: string;
@@ -68,8 +68,7 @@ const SEO = ({
         : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 
     return (
-        <Helmet>
-            <html lang="es" />
+        <>
             <title>{title}</title>
             <meta name="description" content={description} />
             <meta name="robots" content={robots} />
@@ -92,7 +91,7 @@ const SEO = ({
             <script type="application/ld+json">
                 {JSON.stringify(structuredData)}
             </script>
-        </Helmet>
+        </>
     );
 };
 
