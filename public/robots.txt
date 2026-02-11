@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: vpgproyectos.es
+Sitemap: https://vpgproyectos.es/sitemap.xml

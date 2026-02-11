@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const Budget = () => {
     const [submitted, setSubmitted] = useState(false);
@@ -91,9 +92,12 @@ const Budget = () => {
 
             setSubmitted(true);
             setTimeout(() => setSubmitted(false), 8000);
-        } catch (err: any) {
+        } catch (err: unknown) {
             console.error('Submission error:', err);
-            setError(err.message || 'Ocurrió un error inesperado. Por favor, inténtalo de nuevo.');
+            const message = err instanceof Error
+                ? err.message
+                : 'Ocurrió un error inesperado. Por favor, inténtalo de nuevo.';
+            setError(message);
         } finally {
             setLoading(false);
         }
@@ -101,6 +105,13 @@ const Budget = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="Solicitar Presupuesto | VPG Proyectos y Obras en Granada"
+                description="Pide tu presupuesto online con VPG Proyectos y Obras para instalaciones eléctricas, fotovoltaica y obra civil en Granada."
+                canonical="/presupuesto"
+                image="/logo.png"
+                pageType="Service"
+            />
             {/* Header Section */}
             <section className="bg-vpg-navy text-white py-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-vpg-yellow diagonal-accent opacity-90"></div>

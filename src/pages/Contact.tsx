@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaUser } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     const fadeInUp = {
@@ -31,6 +32,13 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="Contacto | VPG Proyectos y Obras en Granada"
+                description="Contacta con VPG Proyectos y Obras en Granada. Solicita presupuesto para instalaciones eléctricas, placas solares y obra civil."
+                canonical="/contacto"
+                image="/logo.png"
+                pageType="ContactPage"
+            />
             {/* Header Section */}
             <section className="bg-vpg-navy text-white py-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-vpg-yellow diagonal-accent opacity-90"></div>
@@ -40,7 +48,7 @@ const Contact = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-6xl font-bold mb-4"
                     >
-                        Contacto
+                        Contacto VPG Proyectos y Obras
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}

@@ -22,7 +22,8 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="flex items-center space-x-3">
-                        <img src={logo} alt="VPG Logo" className="h-12 w-auto" />
+                        <img src={logo} alt="VPG Proyectos y Obras" className="h-12 w-auto" />
+                        <span className="sr-only">VPG Proyectos y Obras</span>
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -47,7 +48,7 @@ const Header = () => {
                     <button
                         className="md:hidden text-white text-3xl"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label="Toggle menu"
+                        aria-label="Abrir menú de navegación"
                     >
                         {isMenuOpen ? <HiX /> : <HiMenu />}
                     </button>

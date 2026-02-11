@@ -11,6 +11,7 @@ import {
     FaCogs,
     FaWater
 } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import heroImage from '../assets/images/hero.png';
 import electricalImage from '../assets/images/electrical.png';
 import solarImage from '../assets/images/solar.png';
@@ -35,14 +36,25 @@ const Home = () => {
 
     return (
         <div className="min-h-screen">
+            <SEO
+                title="VPG Proyectos y Obras | Electricidad, Fotovoltaica y Obra Civil en Granada"
+                description="VPG Proyectos: Expertos en instalaciones eléctricas, placas solares, fotovoltaica y obra civil en Granada. Solicita presupuesto sin compromiso."
+                canonical="/"
+                image={heroImage}
+                pageType="WebPage"
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${heroImage})` }}
-                >
-                    <div className="absolute inset-0 bg-vpg-navy bg-opacity-70"></div>
-                </div>
+                <img
+                    src={heroImage}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                />
+                <div className="absolute inset-0 bg-vpg-navy bg-opacity-70"></div>
 
                 <div className="relative z-10 container mx-auto px-4 text-center text-white">
                     <motion.h1
@@ -51,7 +63,7 @@ const Home = () => {
                         transition={{ duration: 0.8 }}
                         className="text-5xl md:text-7xl font-bold mb-6 text-shadow"
                     >
-                        VPG Proyectos y Obras
+                        VPG Proyectos y Obras en Granada
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -59,7 +71,7 @@ const Home = () => {
                         transition={{ delay: 0.3, duration: 0.8 }}
                         className="text-xl md:text-2xl mb-8 text-gray-200"
                     >
-                        Excelencia en Instalaciones Eléctricas, Fotovoltaica y Obra Civil
+                        Líderes en Instalaciones Eléctricas, Placas Solares y Reforma Integral en Granada
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -117,8 +129,10 @@ const Home = () => {
                         >
                             <img
                                 src={placassolarImage}
-                                alt="Placassolar"
+                                alt="Instalación de placas solares en Granada por VPG Proyectos"
                                 className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
+                                loading="lazy"
+                                decoding="async"
                             />
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-vpg-yellow opacity-50 rounded-lg -z-10"></div>
                         </motion.div>
@@ -153,6 +167,8 @@ const Home = () => {
                                     src={electricalImage}
                                     alt="Instalaciones Eléctricas"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
                                 <div className="absolute bottom-4 left-4 text-white">
@@ -163,7 +179,7 @@ const Home = () => {
                             <div className="p-6">
                                 <p className="text-gray-700">
                                     Diseño, instalación y mantenimiento de sistemas eléctricos para proyectos
-                                    industriales y comerciales de gran envergadura.
+                                    industriales y residenciales en toda la provincia de Granada.
                                 </p>
                             </div>
                         </motion.div>
@@ -175,6 +191,8 @@ const Home = () => {
                                     src={solarImage}
                                     alt="Fotovoltaica"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
                                 <div className="absolute bottom-4 left-4 text-white">
@@ -184,8 +202,8 @@ const Home = () => {
                             </div>
                             <div className="p-6">
                                 <p className="text-gray-700">
-                                    Instalación de plantas solares fotovoltaicas con más de 20 años de experiencia
-                                    en energía solar y renovable.
+                                    Instalación de placas solares fotovoltaicas en Granada. Ahorra energía con
+                                    nuestros sistemas de autoconsumo expertos.
                                 </p>
                             </div>
                         </motion.div>
@@ -197,6 +215,8 @@ const Home = () => {
                                     src={civilImage}
                                     alt="Obra Civil"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
                                 <div className="absolute bottom-4 left-4 text-white">
@@ -219,6 +239,8 @@ const Home = () => {
                                     src={plumbingImage}
                                     alt="Fontanería y Aerotermia"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
                                 <div className="absolute bottom-4 left-4 text-white">
