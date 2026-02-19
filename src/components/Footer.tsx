@@ -11,7 +11,7 @@ const Footer = () => {
                         <h3 className="text-2xl font-bold mb-4 text-vpg-yellow">VPG</h3>
                         <p className="text-gray-300 mb-4">
                             Proyectos y Obras - Empresa especializada en instalaciones eléctricas,
-                            fotovoltaica y obra civil.
+                            fotovoltaica, obra civil y aerotermia en Granada.
                         </p>
                         <p className="text-sm text-gray-400">
                             Una empresa joven con dirección curtida en primera línea de obra.
@@ -56,7 +56,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center space-x-3">
                                 <FaMapMarkerAlt className="text-vpg-yellow" />
-                                <span className="text-gray-300">España</span>
+                                <span className="text-gray-300">Granada, España</span>
                             </li>
                         </ul>
                     </div>

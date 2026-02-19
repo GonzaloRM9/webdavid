@@ -40,7 +40,7 @@ const Contact = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-6xl font-bold mb-4"
                     >
-                        Contacto
+                        Contacta con VPG Proyectos en Granada
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}

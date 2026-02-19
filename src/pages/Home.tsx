@@ -117,7 +117,7 @@ const Home = () => {
                         >
                             <img
                                 src={placassolarImage}
-                                alt="Placassolar"
+                                alt="Instalación de placas solares fotovoltaicas en Granada — VPG Proyectos"
                                 className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
                             />
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-vpg-yellow opacity-50 rounded-lg -z-10"></div>
@@ -151,7 +151,7 @@ const Home = () => {
                             <div className="relative overflow-hidden h-64">
                                 <img
                                     src={electricalImage}
-                                    alt="Instalaciones Eléctricas"
+                                    alt="Instalaciones eléctricas industriales en Granada — VPG Proyectos"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
@@ -173,13 +173,13 @@ const Home = () => {
                             <div className="relative overflow-hidden h-64">
                                 <img
                                     src={solarImage}
-                                    alt="Fotovoltaica"
+                                    alt="Instalación de paneles solares fotovoltaicos en Granada"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
                                 <div className="absolute bottom-4 left-4 text-white">
                                     <FaSolarPanel className="text-4xl text-vpg-yellow mb-2" />
-                                    <h3 className="text-2xl font-bold">Fotovoltaica</h3>
+                                    <h3 className="text-2xl font-bold">Energía Fotovoltaica y Paneles Solares</h3>
                                 </div>
                             </div>
                             <div className="p-6">
@@ -195,7 +195,7 @@ const Home = () => {
                             <div className="relative overflow-hidden h-64">
                                 <img
                                     src={civilImage}
-                                    alt="Obra Civil"
+                                    alt="Obras civiles y construcción en Granada — VPG Proyectos"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
@@ -217,13 +217,13 @@ const Home = () => {
                             <div className="relative overflow-hidden h-64">
                                 <img
                                     src={plumbingImage}
-                                    alt="Fontanería y Aerotermia"
+                                    alt="Instalación de aerotermia y fontanería en Granada"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-vpg-navy to-transparent opacity-70"></div>
                                 <div className="absolute bottom-4 left-4 text-white">
                                     <FaWater className="text-4xl text-vpg-yellow mb-2" />
-                                    <h3 className="text-2xl font-bold">Fontanería</h3>
+                                    <h3 className="text-2xl font-bold">Fontanería y Aerotermia</h3>
                                 </div>
                             </div>
                             <div className="p-6">
